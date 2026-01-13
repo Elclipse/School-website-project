@@ -27,8 +27,8 @@ html {
 }
 
 .home-img {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
 }
 
@@ -61,22 +61,11 @@ html {
     background: url("background_tet.jpg") center center no-repeat;
     background-size: cover;
     position: relative;
+    z-index: 1;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.background_trang_chu::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;    
-    background: url("background.jpg") center center no-repeat;
-    background-size: cover;
-    z-index: 1;
 }
 
 .lop_mo {
