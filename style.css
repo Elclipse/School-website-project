@@ -60,7 +60,7 @@ html {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: url("background_tet.jpg") center center no-repeat;
+    background: url("img/background_tet.jpg") center center no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
@@ -161,3 +161,126 @@ html {
 .noi_dung_chinh:nth-of-type(9){
     background: #feeedf
 }
+
+header {
+    padding: 40px 20px;
+}
+
+header h1 {
+    color: gold;
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #800000;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 100%;
+}
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);   /* 6 cột */
+    grid-template-rows: repeat(2, auto);     /* 2 hàng */
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.member {
+    background-color: #fff3cd;
+    color: #800000;
+    width: 280px;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.member:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: gold;
+    margin: 0 auto 15px;
+    line-height: 120px;
+    font-size: 55px;
+}
+
+.member h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.member p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+footer {
+    padding: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Trang trí hoa mai */
+.flower {
+    position: fixed;
+    font-size: 30px;
+    animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+    0% { top: -10%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 110%; opacity: 0; }
+}
+
+.bg-trangchu-2{
+    height:100vh;
+    background-image: url("img/test.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.noi_dung_hang{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:40px;
+}
+
+
+.chu_noi_dung{
+    max-width:500px;
+    text-align:left;
+}
+
+.anh_noi_dung{
+    width:320px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
