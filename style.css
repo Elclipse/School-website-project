@@ -36,6 +36,7 @@ html {
 }
 
 .muc_dieu_huong {
+    position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -54,7 +55,6 @@ html {
 }
 
 /* Tạo background cho trang chủ chính*/
-
 .background_trang_chu {
     width: 100%;
     height: 100vh;
@@ -180,6 +180,16 @@ html {
     font-size:20px;
     text-align:center;    
 }
+.bg2-imgbox img{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.bg2-imgbox img:hover{
+    transform: scale(1.08) translateY(-10px);
+    z-index: 10; /* nổi lên trên ảnh còn lại */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
 
 /* VIDEO */
 .bg2-right video{
@@ -230,7 +240,8 @@ html {
 }
 
 .nut_chuyen_phan_duoi_xuong:hover {
-    background: rgba(0,0,0,0.85);
+    background: rgba(253, 98, 98, 0.85);
+    color: #ffe75c;
 }
 
 /* Tạo ô nội dung */
@@ -404,8 +415,16 @@ body {
     border-radius: 50%;
     background-color: gold;
     margin: 0 auto 15px;
-    line-height: 120px;
-    font-size: 55px;
+    overflow: hidden;     /* Cắt phần thừa của ảnh */
+}
+
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Không méo hình */
+    border-radius: 50%;    /* Cắt thành hình tròn */
+    display: block;
 }
 
 .member h3 {
