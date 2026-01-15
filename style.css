@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
     background-color: #dc392f;
+    font-family: "TDPhudu", sans-serif;
 }
 
 * {
@@ -46,7 +47,6 @@ html {
     text-decoration: none;
     margin-left: 15px;
     font-size: 16px;
-    font-family: "DTPhudu", sans-serif;
 }
 
 .muc_dieu_huong a:hover {
@@ -141,7 +141,6 @@ html {
 .bg2-title{
     text-align:center;
     color:#ffd36b;
-    font-family:"TDPhuDu",sans-serif;
 }
 
 /* CỘT TRÁI */
@@ -180,7 +179,6 @@ html {
     color:#fce6c2;
     font-size:20px;
     text-align:center;    
-    font-family:"TDPhuDu",sans-serif;
 }
 
 /* VIDEO */
@@ -191,7 +189,13 @@ html {
 
 /* QR */
 .bg2-qr{
-    width:220px;
+    width:300px;
+}
+
+.bg2-right p{
+    color:#fce6c2;
+    font-size:20px;
+    text-align:center;    
 }
 
 
@@ -220,7 +224,6 @@ html {
     background: #fce6c2;
     color: #0052f6;
     font-weight: bold;
-    font-family: "DTPhudu", sans-serif;
     text-decoration: none;
     border-radius: 30px;
     font-size: 18px;
@@ -295,7 +298,6 @@ html {
 .chu_noi_dung{
     flex: 1;              /* cho chữ chiếm hết phần trống */
     min-width: 0;        /* tránh tràn flex */
-    font-family: "TDPhudu", sans-serif;
 }
 
 
@@ -354,7 +356,6 @@ html {
 
 header {
     padding: 40px 20px;
-    font-family: "TDPhudu", sans-serif;
 }
 
 header h1 {
@@ -390,6 +391,7 @@ body {
     transition: 0.3s;
     text-align: center;
     word-wrap: break-word;
+    
 }
 
 .member:hover {
@@ -418,10 +420,89 @@ body {
     white-space: normal;
 }
 
+/* Ô góp ý */
+.gop_y {
+    width: 90%;
+    margin: 40px auto 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff7d6, #ffe4b5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.gop_y h2 {
+    color: #800000;
+    margin-bottom: 10px;
+}
+
+.gop_y p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Form góp ý */
+.form_gopy {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form_gopy input,
+.form_gopy textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.form_gopy textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.form_gopy button {
+    background: gold;
+    color: #800000;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form_gopy button:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
 
 footer {
     padding: 20px;
     font-size: 14px;
-    font-family: "TDPhudu", sans-serif;
     color: #000000;
+}
+
+/* Nhạc Tết */
+.nhac_tet {
+    width: 90%;
+    margin: 20px auto 40px;
+    padding: 20px;
+    background: rgba(255, 215, 0, 0.25);
+    border-radius: 20px;
+    text-align: center;
+    font-family: "TDPhudu", sans-serif;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.nhac_tet p {
+    font-size: 20px;
+    color: #800000;
+    margin-bottom: 10px;
+}
+
+.nhac_tet audio {
+    width: 80%;
+    max-width: 500px;
 }
