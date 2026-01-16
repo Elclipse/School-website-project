@@ -10,10 +10,10 @@
     <div class="thanh_dieu_huong">
         <!-- Nút home-->
         <a href="#trangchu">
-            <img src="img/logo_home_button.png" class="home-img">
+            <img src="img/logo_home_button.png" class="nut_home">
         </a>
         
-        <!-- Các nút điều hướng-->
+        <!-- Các nút điều hướng cho các mục-->
         <div class="muc_dieu_huong">
             <a href="#khongkhi">Không khí</a>
             <a href="#chuanbi">Chuẩn bị</a>
@@ -26,39 +26,40 @@
     </div>
 
     <!-- Nền trang chủ chính-->
-    <div class="background_trang_chu" id="trangchu">
-            <a href="#muctrangchuphu" class="nut_chuyen_phan_duoi_xuong">Go</a>
+    <div class="background_trang_chu_chinh" id="trangchu">
+            <a href="#trang_chu_phu" class="nut_chuyen_phan_duoi_xuong">Go</a>
     </div>
 
     <!-- Nền trang chủ phụ -->
-    <div class="bg-trangchu-2" id="muctrangchuphu">
-        <div class="bg2-layout">
+    <div class="bg_trang_chu_phu" id="trang_chu_phu">
+
+        <div class="bo_cuc_trang_chu_phu_chinh">
             <!-- TIÊU ĐỀ -->
-            <div class="bg2-center">
-                <div class="bg2-title">
+            <div class="bo_cuc_trang_chu_phu_giua">
+                <div class="cau_chuc">
                     <h1>NGÀY TẾT VIỆT NAM</h1>
                     <h2>Mừng xuân Bính Ngọ</h2>
                     <h3>Mừng xuân 2026</h3>
                 </div>
             </div>
 
-            <!-- CỘT TRÁI -->
-            <div class="bg2-left">
-                <div class="bg2-imgbox">
+            <!-- BG trái -->
+            <div class="bo_cuc_trang_chu_phu_trai">
+                <div class="bo_cuc_trang_chu_phu_anh">
                     <img src="img/noi_dung_bg_phu1.jpeg">
                     <p>Gói bánh chưng</p>
                 </div>
 
-                <div class="bg2-imgbox">
+                <div class="bo_cuc_trang_chu_phu_anh">
                     <img src="img/noi_dung_bg_phu2.jpeg">
                     <p>Pháo hoa</p>
                 </div>
             </div>
 
-            <!-- CỘT PHẢI -->
-            <div class="bg2-right">
+            <!-- BG phảitheme -->
+            <div class="bo_cuc_trang_chu_phu_phai">
                 <video src="video/tet.mp4" autoplay muted loop controls></video>
-                <img src="img/noi_dung_bg_phu3.jpeg" class="bg2-qr">
+                <img src="img/noi_dung_bg_phu3.jpeg" class="ma_QR_trang_chu_phu">
                 <p>Quét mã để nhận được điều đặc biệt!!!</p>
             </div>
         </div>
@@ -66,6 +67,7 @@
 
     <!-- Nội dung chính -->        
     <div class="noi_dung_chinh" id="khongkhi">
+
         <div class="noi_dung_hang">
             <div class="chu_noi_dung">
                 <h1>Không khí</h1>
@@ -98,6 +100,7 @@
 
 
     <div class="noi_dung_chinh" id="phongtuctapquan">
+
         <div class="noi_dung_hang">
             <div class="chu_noi_dung">
                 <h1>Phong tục và tập quán</h1>
@@ -132,8 +135,6 @@
         </div>
     </div>
    
-
-   
     <div class="noi_dung_chinh" id="hoatdong">
         <div class="noi_dung_hang">
             <div class="chu_noi_dung">
@@ -150,8 +151,6 @@
             </div>
         </div>
     </div>
-    
-
     
     <div class="noi_dung_chinh" id="trangphuc">
         <div class="noi_dung_hang">
@@ -170,12 +169,15 @@
     
 
     <div class="noi_dung_chinh" id="lienhe">
+
         <header>
             <h1>🧧THÀNH VIÊN 🌼</h1>
             <p>Chào Xuân 2026 – An Khang Thịnh Vượng</p>
         </header>
+
     <!-- Thành viên-->
     <div class="container">
+
         <div class="member">
             <div class="avatar">
             <img src="img/pfp/vu.jpeg">
@@ -188,7 +190,7 @@
         <div class="member">
             <div class="avatar">🧧</div>
             <h3>Trần Tiến</h3>
-            <p>Nội dung</p>
+            <p>Nội dung, Ảnh</p>
         </div>
 
         <div class="member">
@@ -228,9 +230,12 @@
         </div>
 
         <div class="member">
-            <div class="avatar">🎊</div>
+            <div class="avatar">
+            <img src="img/pfp/nguyen.jpeg">
+            </div>
             <h3>Khôi Nguyên</h3>
             <p>Nội dung</p>
+            <b><u><i><p>Kẻ mạnh không phàn nàn về môi trường</p></i></u></b>
         </div>
 
         <div class="member">
@@ -261,26 +266,27 @@
 
         <!-- Nhạc nền -->
         <div class="nhac_tet">
+
             <p>🎵 Nhạc xuân chào năm mới 🎵</p>
             <audio controls loop>
                 <source src="audio/百香一聞 .mp3" type="audio/mpeg">
             </audio>
+
         </div>
 
         <!-- Ô góp ý -->
         <div class="gop_y">
+
             <h2>📮 GÓP Ý CHO NHÓM</h2>
             <p>Hãy để lại lời chúc hoặc góp ý để nhóm hoàn thiện hơn trong năm 2026 🎆</p>
 
             <form class="form_gopy">
-                <input type="text" placeholder="Tên của bạn">
-                <textarea placeholder="Nhập nội dung góp ý..."></textarea>
+                <input type="text" name="ten_user" placeholder="Tên của bạn">
+                <textarea name="noi_dung" placeholder="Nhập nội dung góp ý..."></textarea>
                 <button type="submit">Gửi góp ý</button>
             </form>
+
         </div>
-
-
-
 
         <footer>
             © 2026 | Chúc Mừng Năm Mới – Vạn Sự Như Ý 🏮
