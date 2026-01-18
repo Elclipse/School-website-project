@@ -252,19 +252,6 @@ html {
     width:300px;
 }
 
-/* Tạo hiệu ứng hoa rơi */
-.flower {
-    position: fixed;
-    font-size: 30px;
-    animation: fall 6s linear infinite;
-}
-
-@keyframes fall {
-    0% { top: -10%; opacity: 0; }
-    50% { opacity: 1; }
-    100% { top: 110%; opacity: 0; }
-}
-
 /* Tạo ô nội dung */
 .noi_dung_chinh{
     margin-top: 80px; /* để không bị thanh điều hướng che */

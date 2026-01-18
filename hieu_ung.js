@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
 const hoaContainer = document.querySelector('.hoa-roi');
 
 // Hoa mai 🌼 + sen 🌸
-const hoaList = ['🌼', '🌸'];
+const hoaList = ['🌼', '🌸', '🧧', '🐎', '🏮'];
 
 function taoHoa() {
     const hoa = document.createElement('div');
