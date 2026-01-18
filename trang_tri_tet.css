@@ -546,3 +546,35 @@ footer {
     font-size: 14px;
     color: #000000;
 }
+
+/* Container hoa rơi */
+.hoa-roi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/* Hoa */
+.hoa {
+    position: absolute;
+    top: -50px;
+    font-size: 26px;
+    opacity: 0.9;
+    animation-name: roi;
+    animation-timing-function: linear;
+}
+
+/* Animation rơi */
+@keyframes roi {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}

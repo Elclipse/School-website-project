@@ -48,3 +48,31 @@ window.addEventListener('scroll', () => {
     // active mục đầu khi load
     moveIndicator(links[0]);
 
+const hoaContainer = document.querySelector('.hoa-roi');
+
+// Hoa mai 🌼 + sen 🌸
+const hoaList = ['🌼', '🌸'];
+
+function taoHoa() {
+    const hoa = document.createElement('div');
+    hoa.classList.add('hoa');
+    hoa.textContent = hoaList[Math.floor(Math.random() * hoaList.length)];
+
+    const size = Math.random() * 20 + 20;
+    hoa.style.fontSize = size + 'px';
+
+    hoa.style.left = Math.random() * 100 + 'vw';
+
+    const duration = Math.random() * 6 + 6;
+    hoa.style.animationDuration = duration + 's';
+
+    hoaContainer.appendChild(hoa);
+
+    // Xóa khi rơi xong
+    setTimeout(() => {
+        hoa.remove();
+    }, duration * 1000);
+}
+
+// Tạo hoa liên tục
+setInterval(taoHoa, 500);
