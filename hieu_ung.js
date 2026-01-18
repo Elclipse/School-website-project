@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
     // active mục đầu khi load
     moveIndicator(links[0]);
 
-const hoaContainer = document.querySelector('.hoa-roi');
+const hoaContainer = document.querySelector('.hoa_roi');
 
 // Hoa mai 🌼 + sen 🌸
 const hoaList = ['🌼', '🌸', '🧧', '🐎', '🏮'];
