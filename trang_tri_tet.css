@@ -17,11 +17,17 @@ html {
 Khung trang web
 
     Tạo thanh điều hướng
+
     Tạo nút home
+
     Căn giữa các mục
-        Hiệu ứng khi di chuột vào các mục
+        Hiệu ứng đổi màu mục khi di chuột vào các mục
+
     Tạo indicator
+
+    Tạo hiệu ứng hoa rơi
 */
+
 .thanh_dieu_huong {
     background: #bf2038;
     padding: 10px;
@@ -32,10 +38,6 @@ Khung trang web
     display: flex;
     align-items: center;
     z-index: 1000;
-}
-
-.thanh_dieu_huong a:hover {
-    text-decoration: underline;
 }
 
 .nut_home {
@@ -58,15 +60,22 @@ Khung trang web
     padding: 6px 0;
 }
 
-/* Indicator */
+.thanh_dieu_huong a:hover {
+    text-decoration: underline;
+}
+
+.muc_dieu_huong a:hover {
+    color: #fce6c2;
+}
+
 .indicator {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     height: 38px;
     padding: 0 22px;
-    background: #fce6c2;
-    color: #0052f6;
+    background: rgba(253, 98, 98, 0.85);;
+    color: #ffe75c;
     font-weight: bold;
     border-radius: 30px;
     font-size: 15px;
@@ -81,22 +90,56 @@ Khung trang web
 
 }
 
-/* Hover giống nút GO */
-.indicator.hover {
-    background: rgba(253, 98, 98, 0.85);
-    color: #ffe75c;
-}
-
-/* Hiệu ứng đổi màu mục khi di chuột vào*/
-.muc_dieu_huong a:hover {
-    color: #fce6c2;
-}
-
 .muc_dieu_huong a.active {
     opacity: 0;
 }
 
-/* Background cho trang chủ chính*/
+.hoa_roi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 36;
+}
+
+.hoa {
+    position: absolute;
+    top: -50px;
+    font-size: 26px;
+    opacity: 0.9;
+    animation-name: roi;
+    animation-timing-function: linear;
+}
+
+@keyframes roi {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* 
+
+Trang chủ
+
+    Background cho trang chủ chính
+    Tạo nút chuyển xuống
+        Hiệu ứng đổi màu cho nút
+
+    Nền trang chủ phụ
+        Bố cục trang chủ phụ chung
+        Bố cục trang chủ phụ bên trái
+        Bố cục trang chủ phụ ở giữa
+        Bố cục trang chủ phụ bên phải
+        Nội dung trang chủ phụ
+
+*/
+
 .background_trang_chu_chinh {
     width: 100%;
     height: 100vh;
@@ -111,7 +154,6 @@ Khung trang web
     align-items: center;
 }
 
-/* Tạo nút chuyển xuống*/
 .nut_chuyen_phan_duoi_xuong {
     position: absolute;
     bottom: 40px;
@@ -128,13 +170,11 @@ Khung trang web
     font-size: 18px;
 }
 
-/* Hiệu ứng đổi màu cho nút*/
 .nut_chuyen_phan_duoi_xuong:hover {
     background: rgba(253, 98, 98, 0.85);
     color: #ffe75c;
 }
 
-/* Nền trang chủ phụ */
 .bg_trang_chu_phu{
     height: 100vh;
     background-image: url("img/background_phu.jpg");
@@ -171,7 +211,6 @@ Khung trang web
     z-index: 2;   /* nằm trên lớp mờ */
 }
 
-/* Bố cục trang chủ phụ chung */
 .bo_cuc_trang_chu_phu_chinh {
     position:relative;
     z-index:2;
@@ -182,7 +221,6 @@ Khung trang web
     padding:100px 120px;
 }
 
-/* Bố cục trang chủ phụ bên trái */
 .bo_cuc_trang_chu_phu_trai {
     grid-column:1;
     grid-row:2 / 4;
@@ -191,7 +229,6 @@ Khung trang web
     justify-content:space-between;
 }
 
-/* Bố cục trang chủ phụ ở giữa */
 .bo_cuc_trang_chu_phu_giua {
     grid-column:1 / 4;
     grid-row:1;
@@ -199,7 +236,6 @@ Khung trang web
     justify-content:center;
 }
 
-/* Bố cục trang chủ phụ bên phải */
 .bo_cuc_trang_chu_phu_phai {
     grid-column:3;
     grid-row:2 / 4;
@@ -209,7 +245,6 @@ Khung trang web
     align-items:center;
 }
 
-/* Nội dung trang chủ phụ */
 .cau_chuc {
     text-align:center;
     color:#ffd36b;
@@ -259,7 +294,29 @@ Khung trang web
     width:300px;
 }
 
-/* Tạo ô nội dung */
+/* 
+
+Nội dung
+
+    Tạo ô nội dung
+        Màu cho từng ô nội dung
+
+    Nội dung + ảnh
+        Ảnh 1
+        Ảnh 2
+            Hiệu ứng nổi khi di chuột tới ảnh
+
+    Phần liên hệ
+        Thành Viên
+            Ảnh pfp
+            Tạo hiệu ứng khi di chuột tới thành viên
+
+    Ô góp ý
+        Form góp ý
+
+    Nhạc    
+
+*/
 .noi_dung_chinh{
     margin-top: 80px; /* để không bị thanh điều hướng che */
     width: 95%;
@@ -284,7 +341,6 @@ Khung trang web
     line-height: 1.6;
 }
 
-/* Nội dung + ảnh */
 .noi_dung_hang{
     display:flex;
     align-items: center;
@@ -296,7 +352,6 @@ Khung trang web
     min-width: 0;        /* tránh tràn flex */
 }
 
-/* Màu cho từng ô nội dung */
 .noi_dung_chinh:nth-of-type(3){
     background: #feeedf
 }
@@ -355,21 +410,18 @@ Khung trang web
     cursor: pointer;
 }
 
-/* Ảnh 1 */
 .cum_anh .anh1{
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-/* Ảnh 2 */
 .cum_anh .anh2{
     bottom: 0;
     right: 0;
     z-index: 2;
 }
 
-/* Hiệu ứng nổi khi di chuột tới */
 .cum_anh img{
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
@@ -381,7 +433,6 @@ Khung trang web
     box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
-/* Phần liên hệ */
 header {
     padding: 40px 20px;
 }
@@ -409,7 +460,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Thành Viên */
 .member {
     background-color: #fff3cd;
     color: #800000;
@@ -433,12 +483,10 @@ body {
     white-space: normal;
 }
 
-/* Tạo hiệu ứng khi di chuột tới thành viên */
 .member:hover {
     transform: translateY(-12px) scale(1.03);
 }
 
-/* Ảnh pfp */
 .avatar {
     width: 120px;
     height: 120px;
@@ -456,7 +504,6 @@ body {
     display: block;
 }
 
-/* Ô góp ý */
 .gop_y {
     width: 90%;
     margin: 40px auto 30px;
@@ -477,7 +524,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Form góp ý */
 .form_gopy {
     display: flex;
     flex-direction: column;
@@ -513,7 +559,6 @@ body {
     transform: scale(0.95);
 }
 
-/* Nhạc */
 .nhac_tet {
     width: 70%;
     margin: 20px auto 40px;
@@ -541,39 +586,19 @@ footer {
     color: #000000;
 }
 
-/* Container hoa rơi */
-.hoa_roi {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 36;
-}
+/* 
 
-/* Hoa */
-.hoa {
-    position: absolute;
-    top: -50px;
-    font-size: 26px;
-    opacity: 0.9;
-    animation-name: roi;
-    animation-timing-function: linear;
-}
+Trang cảm ơn 
+    Dùng background chính 
+        Lớp phủ mờ
+    
+    Hộp cảm ơn
+        Tiêu đề 
+        Nội dung
 
-/* Animation rơi */
-@keyframes roi {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(110vh) rotate(360deg);
-    }
-}
+    Nút quay lại
 
-/* Trang cảm ơn – dùng background chính */
+*/
 .trang_cam_on {
     min-height: 100vh;
     background: url("img/background_chinh.jpg") center center / cover no-repeat;
@@ -585,8 +610,6 @@ footer {
     overflow: hidden;
 }
 
-
-/* Lớp phủ mờ */
 .camon_overlay {
     position: absolute;
     inset: 0;
@@ -595,7 +618,6 @@ footer {
     z-index: 1;
 }
 
-/* Hộp cảm ơn */
 .hop_cam_on {
     position: relative;
     z-index: 2;
@@ -607,7 +629,6 @@ footer {
     box-shadow: 0 0 30px rgba(0,0,0,0.35);
 }
 
-/* Tiêu đề */
 .hop_cam_on h1 {
     color: #bf2038;
     font-size: 42px;
@@ -615,7 +636,6 @@ footer {
     text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 }
 
-/* Nội dung */
 .hop_cam_on p {
     font-size: 18px;
     color: #333;
@@ -623,7 +643,6 @@ footer {
     margin-bottom: 35px;
 }
 
-/* Nút quay lại */
 .nut_quay_lai {
     display: inline-block;
     padding: 14px 36px;
